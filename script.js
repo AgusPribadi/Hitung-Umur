@@ -3,25 +3,25 @@ const birthdayEl = document.getElementById("birthday");
 const resultEl = document.getElementById("result");
 
 function calculateAge() {
-  const birthdayValue = birthdayEl.value;
-  if (birthdayValue === "") {
-    alert("Please enter your birthday");
-  } else {
-    const age = getAge(birthdayValue);
-    if (age > 1) {
-      resultEl.innerText = `Your age is ${age} years old`
+    const birthdayValue = birthdayEl.value;
+    if (birthdayValue === "") {
+        alert("Mohon masukkan tanggal lahirmu");
     } else {
-       resultEl.innerText = `Your age is ${age} year old`
+        const age = getAge(birthdayValue);
+        if (age > 1) {
+            resultEl.innerText = `Umur Kamu ${age} Tahun`;
+        } else {
+            resultEl.innerText = `Umur Kamu ${age} Tahun`;
+        }
     }
-  }
 }
 function getAge(birthdayValue) {
-  const currentDate = new Date();
-  const birthdayDate = new Date(birthdayValue);
-  let age = currentDate.getFullYear() - birthdayDate.getFullYear();
-  const month = currentDate.getMonth() - birthdayDate.getMonth();
+    const currentDate = new Date();
+    const birthdayDate = new Date(birthdayValue);
+    let age = currentDate.getFullYear() - birthdayDate.getFullYear();
+    const month = currentDate.getMonth() - birthdayDate.getMonth();
 
-  return age;
+    return age;
 }
 
 btnEl.addEventListener("click", calculateAge);
