@@ -31,7 +31,8 @@ h1 {
     font-size: 36px;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #343a40;
     font-weight: 600;
 }
 
@@ -48,8 +49,9 @@ h1 {
 }
 
 label {
-    font-weight: bold;
     margin-bottom: 10px;
+    color: #343a40;
+    font-weight: 600;
 }
 
 input {
